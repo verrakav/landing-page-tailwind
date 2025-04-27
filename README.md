@@ -1,54 +1,31 @@
-# React + TypeScript + Vite
+# This repo is part of styling-comparison experience exchange at liskov.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Tailwind CSS** in a React application to build a simple landing page. The following outlines the utility-first approach of Tailwind CSS, its use cases, and highlights both its advantages and disadvantages.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Example of styling components using Tailwind's utility classes.
+- Focus on simplicity and flexibility in design.
 
-## Expanding the ESLint configuration
+## Use Cases
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Rapid prototyping of UI components.
+- Building responsive designs with minimal custom CSS.
+- Maintaining consistent styling across a project.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Problems Solved
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Eliminates the need for writing custom CSS for common styles.
+- Reduces context switching between HTML and CSS files.
+- Provides a highly customizable design system.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Disadvantages
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Steeper learning curve for beginners unfamiliar with utility-first CSS.
+- Can lead to cluttered HTML with excessive class names. (which circles us back to abstracting custom utility classes into a separate file)
+- Requires configuration for advanced customization.
+
+## Technologies Used
+
+- React (Vite)
+- Tailwind CSS Version
