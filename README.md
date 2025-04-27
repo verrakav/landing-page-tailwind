@@ -6,6 +6,7 @@
 
 - Example of styling components using Tailwind's utility classes.
 - Focus on simplicity and flexibility in design.
+- Runs on port 3002
 
 ## Use Cases
 

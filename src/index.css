@@ -1,0 +1,17 @@
+/* NOTE: 
+1. import fonts here (& potentially anything that should load before everything)*/
+@font-face {
+  font-family: Karst-Light;
+  src: url("./assets/karst/Karst-Light.ttf");
+}
+
+/* 2. this should stay here order seems to matter */
+@import "tailwindcss";
+
+/* 3. then you can define your custom theme */
+@theme {
+  /*  custom colours || fonts can go here */
+  --color-my-blue: #87ceeb;
+  /* the font first, the backup second */
+  --font-karst-base: Karst-Light, sans-serif;
+}
